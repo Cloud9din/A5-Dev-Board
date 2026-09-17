@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DevBoard task management dashboard">
+  <title>DevBoard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar container">
+    <a class="brand" href="index.html" aria-label="DevBoard home">
+      <span class="brand-mark"><span></span></span>
+      <span>Dev<span class="brand-strong">Board</span></span>
+    </a>
+
+    <div class="topbar-actions">
+      <div class="completed-total" aria-label="Completed tasks">
+        <span class="check-icon">✓</span>
+        <strong id="completed-count">23</strong>
+      </div>
+      <button id="theme-button" class="theme-button" type="button" aria-label="Change background colour">
+        <span class="colour-wheel"></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="dashboard container">
+    <section class="board" aria-label="Task board">
+      <div class="summary-grid">
+        <article class="summary-card assigned-card">
+          <span class="summary-icon check-icon">✓</span>
+          <div>
+            <p>Task Assigned</p>
+            <strong id="assigned-count">6</strong>
+          </div>
+        </article>
+
+        <a class="discover-card" href="blog.html">
+          <span class="discover-emoji">📝</span>
+          <span>Discover Something<br class="mobile-break"> New Today!</span>
+        </a>
+
+        <article class="summary-card date-card">
+          <span class="summary-icon calendar-icon" aria-hidden="true">▦</span>
+          <div>
+            <p id="weekday">Tue,</p>
+            <strong id="full-date">Feb 25 2025</strong>
+          </div>
+        </article>
+      </div>
+
+      <div class="divider"></div>
+
+      <section class="task-grid" aria-label="Assigned tasks">
+        <article class="task-card">
+          <span class="company">Shop Ease</span>
+          <h2>Fix Mobile Button Issue</h2>
+          <p class="description">A card component has a figure, a body part, and inside body there are title and actions parts.</p>
+          <div class="task-footer">
+            <p><span>Deadline</span><strong>21 March 2025</strong></p>
+            <button class="complete-button" type="button">Completed</button>
+          </div>
+        </article>
+
+        <article class="task-card">
+          <span class="company">Soft Pay</span>
+          <h2>Add Pay Success Modal</h2>
+          <p class="description">A card component has a figure, a body part, and inside body there are title and actions parts.</p>
+          <div class="task-footer">
+            <p><span>Deadline</span><strong>25 March 2025</strong></p>
+            <button class="complete-button" type="button">Completed</button>
+          </div>
+        </article>
+
+        <article class="task-card">
+          <span class="company">Meta</span>
+          <h2>Add new reaction 🙌</h2>
+          <p class="description">A card component has a figure, a body part, and inside body there are title and actions parts.</p>
+          <div class="task-footer">
+            <p><span>Deadline</span><strong>31 March 2025</strong></p>
+            <button class="complete-button" type="button">Completed</button>
+          </div>
+        </article>
+
+        <article class="task-card">
+          <span class="company">Programming Hero</span>
+          <h2>Fix Video Loading Issue</h2>
+          <p class="description">A card component has a figure, a body part, and inside body there are title and actions parts.</p>
+          <div class="task-footer">
+            <p><span>Deadline</span><strong>21 March 2025</strong></p>
+            <button class="complete-button" type="button">Completed</button>
+          </div>
+        </article>
+
+        <article class="task-card">
+          <span class="company">Google LLC</span>
+          <h2>Integrate AI Search</h2>
+          <p class="description">A card component has a figure, a body part, and inside body there are title and actions parts.</p>
+          <div class="task-footer">
+            <p><span>Deadline</span><strong>01 April 2025</strong></p>
+            <button class="complete-button" type="button">Completed</button>
+          </div>
+        </article>
+
+        <article class="task-card">
+          <span class="company">Polygon Tech</span>
+          <h2>Review Ami Probashi Site</h2>
+          <p class="description">A card component has a figure, a body part, and inside body there are title and actions parts.</p>
+          <div class="task-footer">
+            <p><span>Deadline</span><strong>5 May 2025</strong></p>
+            <button class="complete-button" type="button">Completed</button>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <aside class="activity-panel" aria-label="Activity log">
+      <div class="activity-header">
+        <h2><span aria-hidden="true">↻</span> Activity Log</h2>
+        <button id="clear-history" type="button">Clear History</button>
+      </div>
+      <div class="divider"></div>
+      <div id="activity-list" aria-live="polite">
+        <p class="empty-message">No activity yet. Complete a task to see it here.</p>
+      </div>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">Board updated successfully</div>
+  <script src="script.js"></script>
+</body>
+</html>

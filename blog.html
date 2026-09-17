@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DevBoard JavaScript DOM questions and answers">
+  <title>DevBoard Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar container">
+    <a class="brand" href="index.html" aria-label="DevBoard home">
+      <span class="brand-mark"><span></span></span>
+      <span>Dev<span class="brand-strong">Board</span></span>
+    </a>
+    <a class="back-button" href="index.html">Back to Desk</a>
+  </header>
+
+  <main class="blog container">
+    <h1>Blogs</h1>
+
+    <article class="question-card">
+      <h2>Question-1: What are the different ways to select an element in the DOM?</h2>
+      <div class="answer">
+        <p>We can select DOM elements in several ways:</p>
+        <ul>
+          <li><code>document.getElementById('id')</code> selects one element by its ID.</li>
+          <li><code>document.getElementsByClassName('class')</code> selects elements by class name.</li>
+          <li><code>document.getElementsByTagName('tag')</code> selects elements by tag name.</li>
+          <li><code>document.querySelector('selector')</code> selects the first matching CSS selector.</li>
+          <li><code>document.querySelectorAll('selector')</code> selects all matching CSS selectors.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="question-card">
+      <h2>Question-2: What is the difference between innerHTML, innerText, and textContent?</h2>
+      <div class="answer">
+        <p><code>innerHTML</code> gets or sets HTML markup, including tags. <code>innerText</code> returns the visible text and respects CSS styling. <code>textContent</code> returns all text inside the element, including hidden text, but does not read HTML tags as markup.</p>
+      </div>
+    </article>
+
+    <article class="question-card">
+      <h2>Question-3: What is event delegation in the DOM?</h2>
+      <div class="answer">
+        <p>Event delegation means adding one event listener to a parent element instead of adding separate listeners to all its children. Because events bubble upward, the parent can use <code>event.target</code> to find which child was clicked. This is useful for dynamic elements and improves performance.</p>
+      </div>
+    </article>
+
+    <article class="question-card">
+      <h2>Question-4: What is event bubbling in the DOM?</h2>
+      <div class="answer">
+        <p>Event bubbling is when an event starts on the element that was used and then moves upward through its parent elements. For example, clicking a button can also trigger click listeners on its card, section, and document unless propagation is stopped.</p>
+      </div>
+    </article>
+
+    <article class="question-card">
+      <h2>Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+      <div class="answer">
+        <p>Create an element with <code>document.createElement('div')</code>. Add it with <code>parent.appendChild(element)</code> or <code>parent.append(element)</code>. Remove it with <code>element.remove()</code> or <code>parent.removeChild(element)</code>.</p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
